@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bloxey.github.io/assignment4/CactusGrowing.html</loc>
+    <lastmod>2019-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.25</priority>
+  </url>
+
+  <url>
+    <loc>https://bloxey.github.io/assignment4/Tomass_Olups.html</loc>
+    <lastmod>2019-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.25</priority>
+  </url>
+
+  <url>
+    <loc>https://bloxey.github.io/assignment4/DirtRally.html</loc>
+    <lastmod>2019-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.25</priority>
+  </url>
+
+  <url>
+    <loc>https://bloxey.github.io/assignment4/lido.html</loc>
+    <lastmod>2019-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.25</priority>
+  </url>
+
+</urlset>

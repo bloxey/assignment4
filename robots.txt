@@ -1,0 +1,4 @@
+user-agent: *
+allow /assignment4/
+
+Sitemap: https://bloxey.github.io/assignment4/sitemap.xml
