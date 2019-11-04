@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dirt Rally</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+			@font-face {
+				  font-family: 'Fjalla One';
+				  font-style: normal;
+				  src: 	local('Fjalla One'),
+						local('FjallaOne-Regular'),
+						url(http://themes.googleusercontent.com/static/fonts/fjallaone/v1/rxxXUYj4oZ6Q5oDJFtEd6hsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+				  font-weight: normal;
+			}
+
+			@font-face 
+			{
+				  font-family: 'Raleway';
+				  font-style: normal;
+				  src:  local('Raleway'),
+						local('Raleway-Regular'),
+						url(http://themes.googleusercontent.com/static/fonts/raleway/v7/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
+				  font-weight: normal;
+			}
+
+			@media print
+			{
+				  div.menu 
+				  {
+						display:none;
+				  }
+				  form
+				  {
+						display:none;
+				  }
+
+				  #jssor_1 
+				  {
+						display:none;
+				  }
+				  form
+				  {
+						display:none;
+				  }
+			}
+
+			body 
+			{
+				  background-image: url("https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/310560/e17af3b62361b2b30bc9d51aa224eeec429cc693.jpg");    
+				  background-repeat: no-repeat;
+				  background-attachment: fixed; 
+			}
+
+			html,body 
+			{      
+				  height: 100%;
+			}
+
+			html
+			{      
+				  margin:auto;
+			}
+
+			article
+			{
+				  background-color: rgba(255, 255, 255, 0.7);
+				  min-width: 400px;      
+				  margin-top:1em;
+				  margin-bottom: 1em;
+				  padding-left: 120px;
+				  padding-right: 120px;
+				  display:block;
+				  width: 55%;      
+				  margin:auto;
+				  padding-bottom: 0.8em;
+			}
+
+			h1, h2, h3, h4
+			{
+				color: black;
+				font-family:'Fjalla One';
+				margin-top: 4px;
+				margin-bottom: 8px;
+				line-height: 1.5em;    
+			}
+
+			h4.references
+			{
+				margin-top:50px;
+			}
+
+			h1
+			{
+				  font-size: 1.75em;
+			}
+			h2
+			{
+				  font-size: 1.5em;
+			}
+			h3
+			{
+				  font-size: 1.25em;
+			}
+
+			p
+			{
+				color: black;
+				font-size: 16px;
+				line-height: 1.5em;
+				font-family: 'Fjalla One';
+				min-width: 400px;
+				margin-top:1em;
+			}
+
+			#First
+			{
+				  font-size:20px;
+			}
+
+			#Second
+			{
+				  font-style:italic;
+				  font-size:16px;
+			}
+
+			li
+			{
+				color: black;
+				font-size: 14px;
+				line-height: 1.5em;
+				font-family: 'Fjalla One';
+				max-width : 700px;
+				margin-top:1em;
+			}
+
+			.container {
+				  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+				  -moz-column-count: 3; /* Firefox */
+				  column-count: 3;
+			}
+
+			ul.list 
+			{
+				  margin: 0;
+			}
+
+			a.rew
+			{
+				  color: black;
+				  font-size: 1em;
+				  font-weight:100; 
+				  line-height: 1.5em;
+				  font-family: 'Fjalla One';
+				  max-width : 600px;
+				  margin-top:1em;
+			}
+
+			ul.menuL
+			{
+				  list-style-type: none;
+				  margin: 0;
+				  padding: 0;
+				  overflow: hidden;
+			}
+
+			#main-menu li {
+				  float: left;
+			}
+
+			#main-menu li a 
+			{
+				  display: block;
+				  color: black;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+			}
+
+			#main-menu li a:hover:not(.active) 
+			{
+				  color: white;
+				  background-color: #4CAF50;
+			}
+
+			/* jssor slider loading skin spin css */
+			.jssorl-009-spin img 
+			{
+				  animation-name: jssorl-009-spin;
+				  animation-duration: 1.6s;
+				  animation-iteration-count: infinite;
+				  animation-timing-function: linear;
+			}
+
+			@keyframes jssorl-009-spin 
+			{
+				  from {
+						transform: rotate(0deg);
+				  }
+
+				  to {
+						transform: rotate(360deg);
+				  }
+			}
+
+			.jssorb051 .i {position:absolute;cursor:pointer;}
+			.jssorb051 .i .b {fill:#fff;fill-opacity:0.5;}
+			.jssorb051 .i:hover .b {fill-opacity:.7;}
+			.jssorb051 .iav .b {fill-opacity: 1;}
+			.jssorb051 .i.idn {opacity:.3;}
+
+			.jssora051 {display:block;position:absolute;cursor:pointer;}
+			.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+			.jssora051:hover {opacity:.8;}
+			.jssora051.jssora051dn {opacity:.5;}
+			.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+
+			.jssorl-009-spin
+			{
+				  position:absolute;
+				  top:0px;
+				  left:0px;
+				  width:100%;
+				  height:100%;
+				  text-align:center;background-color:rgba(0,0,0,0.7);
+			}
+
+			#jssor_1
+			{
+				  position:relative;
+				  margin:0 auto;
+				  width:1920px;
+				  height:1080px;
+				  overflow:hidden;
+				  visibility:hidden;
+				  margin-left: auto;     
+
+			}
+
+			.containerForm 
+			{
+				  padding: 16px;
+			}
+
+			.clearfix::after 
+			{
+				  content: "";
+				  clear: both;
+				  display: table;
+			}
+
+			.cancelbtn, .signupbtn 
+			{
+				  float: left;
+				  width: 50%;
+			}
+
+			.cancelbtn 
+			{
+				  padding: 14px 20px;
+				  background-color: #f44336;
+			}
+
+			button:hover 
+			{
+				  opacity:1;
+			}
+
+			button 
+			{
+				  background-color: #4CAF50;
+				  color: white;
+				  padding: 14px 20px;
+				  margin: 8px 0;
+				  border: none;
+				  cursor: pointer;
+				  width: 100%;
+				  opacity: 0.9;
+			}
+
+			hr 
+			{
+				  border: 1px solid #f1f1f1;
+				  margin-bottom: 25px;
+			}
+
+			input[type=text], input[type=number], input[type=email]  
+			{
+				  width: 95%;
+				  padding: 15px;
+				  margin: 5px 0 22px 0;
+				  display: inline-block;
+				  border: none;
+				  background: #f1f1f1;
+			}
+
+			input[type=text]:focus, input[type=number]:focus, input[type=email]:focus
+			{
+				  background-color: #ddd;
+				  outline: none;
+			}
+
+			form
+			{
+				  background-color: rgba(96, 157, 255, 0.5);
+			}
+		</style>
+		<script type="application/ld+json">
+			{
+			  "@context" : "http://schema.org",
+			  "@type" : "Article",
+			  "name" : "DiRT Rally",
+			   "mainEntityOfPage": 
+			  {
+				"@type": "WebPage",
+				"@id": "https://google.com/article"
+			  },
+			  "headline": "DiRT Rally",
+			  "dateModified": "2019-11-03T09:20:00+08:00",
+			  "author" : {
+				"@type" : "Person",
+				"name" : "DV17039"
+			  },
+			  "datePublished" : "2019-03-11",
+			  "image" : "https://steamuserimages-a.akamaihd.net/ugc/548656039823083775/9D8340BC6EC9D154B42FBFE966E4EA99B227CC20/",
+			  "url" : "https://store.steampowered.com/app/310560/DiRT_Rally/",
+			  "articleBody" : "DiRT Rally is the most authentic and thrilling rally game ever made, road-tested over 80 million miles by the DiRT community. It perfectly captures that white knuckle feeling of racing on the edge as you hurtle along dangerous roads at breakneck speed, knowing that one crash could irreparably harm your stage time.",
+			  "publisher" : {
+				"@type" : "Organization",
+				"name" : "Codemasters",
+				"logo":
+				{
+				  "@type": "ImageObject",
+				  "url": "http://www.codemasters.com/wp-content/uploads/2018/04/codemasters-splash.jpg"
+				}
+			  }
+			}
+		</script>
+    </head>
+        <body onload="myFunction()">
+
+            <article>
+                <div class="menu">
+                     <ul id="main-menu" class="menuL">
+                        <li><a href=#About>ABOUT THIS GAME</a></li>
+                        <li><a href=#Features>Features</a></li>
+                        <li><a href=#VRSupport>VR SUPPORT</a></li>
+                        <li><a href=#REVIEWS>REVIEWS</a></li>
+                     </ul>
+                </div>
+            </article>
+
+            <article>
+
+                <h1>DiRT Rally</h1>
+
+                <div style="position: relative;">
+                    <div id="jssor_1">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" class="jssorl-009-spin">
+                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" alt="spin" src="img/spin.svg" />
+                        </div>
+                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1920px;height:1080px;overflow:hidden;">
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 1" src="https://steamuserimages-a.akamaihd.net/ugc/548656039823083775/9D8340BC6EC9D154B42FBFE966E4EA99B227CC20/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 2" src="https://steamuserimages-a.akamaihd.net/ugc/788539568425484129/E42642AEE9D1B3BD0C89DA2091387209B6DD93F4/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 3" src="https://steamuserimages-a.akamaihd.net/ugc/97230430492442973/14F8A8E5BC344655EE69A222A7190FAFA3F688AE/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 4" src="https://steamuserimages-a.akamaihd.net/ugc/97229796383567657/075A69A0F4E2093E4688239582E9D08081CCB08F/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 5" src="https://steamuserimages-a.akamaihd.net/ugc/97229796380671727/D9D0B5732E7EB5C5A46DA62A1A532FAFA723153D/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 6" src="https://steamuserimages-a.akamaihd.net/ugc/546405591519007464/3F8DCB98371260211501001A77D94FACD49C93AB/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 7" src="https://steamuserimages-a.akamaihd.net/ugc/437200827347642533/A37AE0D8CFC22B052133B782B67C0CC8F956C47C/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 8" src="https://steamuserimages-a.akamaihd.net/ugc/273972713578028864/25DCAA3A47F29277D2426E632B266CF387A43E69/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 9" src="https://steamuserimages-a.akamaihd.net/ugc/272846079125997596/72494661E477AF422ECF522182952E15E6700B38/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 10" src="https://steamuserimages-a.akamaihd.net/ugc/405683244459449012/302D4B422640DB2E5E747F05D584F44106BBF650/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 11" src="https://steamuserimages-a.akamaihd.net/ugc/450708923752544293/9DBECC967EE72BF6385C4781D254675B26E7D102/" />
+                            </div>
+                            <div data-p="170.00">
+                                <img data-u="image" alt="Auto 12" src="https://steamuserimages-a.akamaihd.net/ugc/526140762131553175/9AD667F163CD80FBB29369052850CD0379728994/" />
+                            </div>
+                        </div>
+                        <!-- Bullet Navigator -->
+                        <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Arrow Navigator -->
+                        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                            </svg>
+                        </div>
+                        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion Jssor Slider End -->
+
+
+                <h2 id="About">ABOUT THIS GAME</h2>
+
+                <p id="First">DiRT Rally is the most authentic and thrilling rally game ever made, road-tested over 80 million miles by the DiRT community. It perfectly captures that white knuckle feeling of racing on the edge as you hurtle along dangerous roads at breakneck speed, knowing that one crash could irreparably harm your stage time. </p>
+
+                <p id="Second">DiRT Rally also includes officially licensed World Rallycross content, allowing you to experience the breathless, high-speed thrills of some of the world’s fastest off-road cars as you trade paint with other drivers at some of the series’ best-loved circuits, in both singleplayer and high-intensity multiplayer races. </p>
+
+                <h2 id="Features">Features</h2>
+                <h4>General</h4>
+                <ul>
+                    <li>ICONIC RALLY CARS - DiRT Rally boasts over 40 of the most iconic and relevant cars from yesteryear through to modern day, representing the cars that the players want, and the ones that make the most sense for the surfaces they race on. </li>
+                    <li>SIX MASSIVE RALLIES WITH OVER 70 STAGES - Head to the muddy paths of Wales, the dusty trails of Greece and the icy tarmac of Monte Carlo. Take on the legendary hillclimb of Pikes Peak, the snowy thrills of Sweden, and the epic scenery of Finland. </li>
+                    <li>OFFICIAL FIA WORLD RALLYCROSS CONTENT – Race at the Lydden Hill, Holjes and Hell tracks in six of the fastest off-road cars and take on your friends in high intensity, bumper-to-bumper multiplayer racing.</li>
+                    <li>CUSTOM RALLY EVENTS: Take any car on any track – configure and compete in single or multi-stage events.</li>
+                    <li>RALLY CHAMPIONSHIPS: Start on the bottom rung of the rally ladder and compete in a succession of events, earning points and money on your way to promotion. Use skilful driving and manage your repair schedules as you work your way to the top division and earn the most lucrative rewards. </li>
+                    <li>UPGRADES, REPAIRS, SETUP AND TUNING - DiRT Rally delivers depth in areas beyond driving – elements such as repairs, upgrades, and setup & tuning add a rich and strategic dimension to your rally experience. </li>
+                    <li>CHALLENGING, UNCOMPROMISING HANDLING MODEL - Codemasters has completely rebuilt the physical simulation for DIRT Rally to adequately capture how it feels to race across changing surfaces and has created brand new models for differential, suspension, engine mapping and turbo modelling. </li>
+                    <li>TEAM MANAGEMENT - Hire and fire your crew members each of whom which will have different skills, improving repair times for different parts of the car. Teach them new skills as they gain experience and work together as a team to improve your performance in events.</li>
+                    <li>PLAYER LEAGUE SUPPORT - Get together with friends and run your very own racing league. Join or create unlimited leagues and run them how and when you want. </li>
+                    <li>DAILY, WEEKLY AND MONTHLY ONLINE CHALLENGES - It’s you versus the entire DiRT community in a series of one-day, week-long and month-long challenges to earn in-game credits to improve your car and team.</li>
+                </ul>
+
+                <h4>Car class</h4>
+                <div class="container">
+                    <ul class="list">
+                        <li>Rally1960s</li>
+                        <li>Rally 1970s</li>
+                        <li>Rally 1980s</li>
+                        <li>Rally Group B (4WD)</li>
+                        <li>Rally Group B (RWD)</li>
+                        <li>Rally Group A</li>
+                        <li>Rally F2 Kit Car</li>
+                        <li>Rally R4</li>
+                        <li>Rally 2000s</li>
+                        <li>Rally 2010s</li>
+                        <li>Rallycross Classic</li>
+                        <li>Rallycross 1600s</li>
+                        <li>Rallycross Supercars</li>
+                        <li>Hillclimb</li>
+                        <li>Modern Hillclimb</li>
+                    </ul>
+                 </div>
+
+                <br>
+                <h2 id="VRSupport">FULL OCULUS VR SUPPORT</h2>
+
+                <p>DiRT Rally now fully supports Oculus Rift giving you the ultimate experience in racing immersion.</p>
+
+                <p>DiRT Rally VR puts you directly in the driver’s seat of the most iconic rally cars ever produced as you take on some of the most challenging stages in the world including the incredible Broadmoor Pikes Peak International Hill Climb as well as experiencing wheel-to-wheel thrill of Rallycross.</p>
+
+                <ul>
+                    <li>Full Oculus Rift VR support throughout the entire game</li>
+                    <li>Amazing 90fps experience</li>
+                </ul>
+
+                <h2 id="REVIEWS">REVIEWS</h2>
+                <p>“Dirt Rally is a brilliant looking and incredible sounding racing sim that feels absolutely outstanding” 8.9 – <a href="http://www.ign.com/articles/2015/12/22/dirt-rally-review" target="_blank" class="rew">IGN</a></p>
+                <p>“Codemasters has delivered what's quite simply its finest driving game to date.” Eurogamer Recommended – <a href="http://www.eurogamer.net/articles/2015-12-14-dirt-rally-review" target="_blank" class="rew">Eurogamer</a></p>
+                <p>“This is as authentic a portrayal of rally as you’re likely to find, and proves to be not just a return to form for Codemasters, but its best game to date.” 8/10 – <a href="https://www.gamespot.com/reviews/dirt-rally-review/1900-6416333/" target="_blank" class="rew">Gamespot</a></p>
+
+                
+
+                <form action="http://naivist.net/form/" style="border:1px solid #4CAF50">
+                    <div class="containerForm">
+                        <h1>Sign Up</h1>
+                        <p>Please fill in this form to join our racing simulator team.</p>
+                        <hr>
+
+                        <label><b>Name</b></label>
+                        <input type="text" placeholder="Name" name="Name" required>
+
+                        <label><b>Nickname</b></label>
+                        <input type="text" placeholder="Nickname" name="Nickname" required>
+
+                        <label><b>Age (above 16)</b></label>
+                        <input type="number" placeholder="Age" name="Age" required min="16">
+
+                        <label><b>Email</b></label>
+                        <input type="email" placeholder="Enter Email" name="email" required>
+                    </div>
+                    <div class="clearfix">
+                        <button type="reset" class="cancelbtn">Clear</button>
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                    </div>
+                </form>
+            </article>
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/27.5.0/jssor.slider.min.js"></script>
+            <script type="text/javascript">
+				function myFunction() 
+				{
+				  var x = document.createElement("ARTICLE");
+				  x.setAttribute("id", "myArticle");
+				  document.body.appendChild(x);
+
+				  var heading = document.createElement("H1");
+				  var txt1 = document.createTextNode("Credit");
+				  heading.appendChild(txt1);
+				  document.getElementById("myArticle").appendChild(heading);
+
+				  var para = document.createElement("P");
+				  var txt2 = document.createTextNode("This page is made for educational purposes ONLY to better understand HTML and Sematic Tagging of  Web content. Since Author: [DV17039] is a big fan of this game, the object is chosen by this factor.");
+				  para.appendChild(txt2);
+				  document.getElementById("myArticle").appendChild(para);
+
+				  var para2 = document.createElement("P");
+				  var txt3 = document.createTextNode("Created on [03.11.2019]");
+				  para2.appendChild(txt3);
+				  document.getElementById("myArticle").appendChild(para2);
+				  
+				  var para3 = document.createElement("P");
+				  var txt4 = document.createTextNode("	All credits to Codemasters, Inc. ");
+				  para2.appendChild(txt4);
+				  document.getElementById("myArticle").appendChild(para3);
+				}
+				
+                jQuery(document).ready(function ($) {
+
+                    var jssor_1_SlideshowTransitions = [
+                      {$Duration:800,$Opacity:2}
+                    ];
+
+                    var jssor_1_options = {
+                      $AutoPlay: 1,
+                      $Cols: 1,
+                      $Align: 0,
+                      $SlideshowOptions: {
+                        $Class: $JssorSlideshowRunner$,
+                        $Transitions: jssor_1_SlideshowTransitions,
+                        $TransitionsOrder: 1
+                      },
+                      $ArrowNavigatorOptions: {
+                        $Class: $JssorArrowNavigator$
+                      },
+                      $BulletNavigatorOptions: {
+                        $Class: $JssorBulletNavigator$
+                      }
+                    };
+
+                    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                    /*#region responsive code begin*/
+
+                    var MAX_WIDTH = 980;
+
+                    function ScaleSlider() {
+                        var containerElement = jssor_1_slider.$Elmt.parentNode;
+                        var containerWidth = containerElement.clientWidth;
+
+                        if (containerWidth) {
+
+                            var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                            jssor_1_slider.$ScaleWidth(expectedWidth);
+                        }
+                        else {
+                            window.setTimeout(ScaleSlider, 30);
+                        }
+                    }
+
+                    ScaleSlider();
+
+                    $(window).bind("load", ScaleSlider);
+                    $(window).bind("resize", ScaleSlider);
+                    $(window).bind("orientationchange", ScaleSlider);
+                    /*#endregion responsive code end*/
+                });
+        </script>
+    </body>
+</html>
