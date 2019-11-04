@@ -1,0 +1,215 @@
+body
+{
+	background-image: url("fons2.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	max-width: 1200px;
+    display:table-cell;
+    vertical-align:middle;
+}
+h2 a
+{
+	color: black;
+}
+.center a
+{
+	color: black;
+	text-decoration: none;
+}
+.pirmabilde
+{
+	width: auto;
+	float: left;
+	min-width: 100px;
+	margin-bottom: 20px;
+	padding-top: 40px;
+	padding-right: 20px;
+}
+.world
+{
+	padding-bottom: 20px;
+}
+.summoners
+{
+	text-align: center;
+	
+}
+.twisted
+{
+	text-align: center;
+}
+.howling
+{
+	text-align: center;
+}
+.teksts2
+{
+	text-align:justify;
+	padding-bottom: 110px;
+}
+.teksts3
+{
+	text-align:justify;
+	padding-bottom: 100px;
+}
+.teksts4
+{
+	text-align:justify;
+	padding-bottom: 120px;
+}
+.left2
+{
+	font-size: 32px;
+	color: black;
+	text-align: center;
+}
+article
+{
+	padding-right: 40px;
+	padding-left: 40px;
+}
+.modeb1
+{
+	float: left;
+	padding-right: 20px;
+}
+.modeb2
+{
+	float: right;
+	padding-left: 20px;
+}
+.modeb3
+{
+	float: left;
+	padding-right: 20px;
+}
+h3
+{
+	font-size: 24px;
+	text-align: center;
+}
+.join
+{
+	font-size: 24px;
+	color: black;
+	padding-top: 80px;
+}
+.download
+{
+	text-align: center;
+	color: black;
+	text-decoration: none;
+}
+.otrabilde
+{
+	width: auto;
+	float: right;
+	padding-left: 20px;
+}
+.left1
+{
+	font-size: 32px;
+	color: black;
+	text-align: center;
+	padding-top: 40px;
+}
+.video
+{
+	padding-left: 300px;
+}
+.left3
+{
+	font-size: 32px;
+	text-align: center;
+}
+html
+{
+    display:table;
+    margin:auto;
+}
+nav#main-menu 
+{
+	font-size: 28px;
+	margin-bottom: 5px;
+	margin-top:10px;
+	background-color:rgba(255,255,255,0.4);
+	text-align: center;
+}
+#main-menu a
+{
+	text-transform: uppercase;
+}
+#main-menu li
+{
+	font-size: 16px;
+	display: inline-block;
+	text-decoration: none;
+	margin:12px;
+	color: black;
+}
+.main-container
+{
+	background-color:rgba(255,255,255,0.4);
+}
+.forma
+{
+	background-color:rgba(255,255,255,0.4);
+}
+@media (min-width: 1100px) {
+    body 
+	{
+        background-image: url("fons.png");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-attachment: fixed; 
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
